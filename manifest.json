@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Caleya — Set your tone for today",
+  "description": "A gentle MoodTab to set your daily tone, track how you feel, and focus your energy.",
+  "version": "0.3.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://caleya.getjottr.workers.dev/*"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newtab/newtab.html"
+  },
+  "action": {
+    "default_title": "Caleya",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "24": "assets/icons/icon24.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

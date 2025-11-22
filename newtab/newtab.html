@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Caleya</title>
+    <link rel="stylesheet" href="newtab.css" />
+  </head>
+  <body>
+    <main class="page" id="pageRoot">
+      <header class="top">
+        <div class="brand">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <h1>Caleya</h1>
+            <p class="tagline">Set your tone for today.</p>
+          </div>
+        </div>
+
+        <div class="right-head">
+          <button class="mini-toggle" id="minimalToggle" type="button">
+            Minimal mode
+          </button>
+          <div class="date" id="todayDate"></div>
+        </div>
+      </header>
+
+      <section class="pro-ribbon" id="proRibbon">
+        <div class="pro-ribbon-text">
+          Unlock Caleya Pro for insights, monthly patterns, and exports.
+        </div>
+        <button class="pro-cta" id="upgradeBtn" type="button">
+          Upgrade to Pro
+        </button>
+      </section>
+
+      <!-- ORB -->
+      <section class="orb-wrap">
+        <div class="orb shimmer" id="orb">
+          <img
+            id="orbIcon"
+            class="orb-icon"
+            src="../assets/icons/icon1024.png"
+            alt="Caleya orb"
+          />
+        </div>
+        <div class="orb-label" id="orbLabel"></div>
+        <div class="quote" id="dailyQuote"></div>
+        <button class="reset-link" id="resetMood" type="button">
+          Reset tone
+        </button>
+      </section>
+
+      <section class="card" id="moodsCard">
+        <h2>How do you want today to feel?</h2>
+        <div class="moods" id="moodsGrid"></div>
+      </section>
+
+      <section class="card" id="noteCard">
+        <h2>What do you want to give your energy to today?</h2>
+        <textarea
+          id="energyNote"
+          rows="3"
+          placeholder="A focus, a feeling, a small intention…"
+        ></textarea>
+        <div class="note-row">
+          <button class="save" id="saveNote" type="button">Save</button>
+          <div class="saved" id="savedHint" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="card today" id="todayCard">
+        <h2>Today’s tone</h2>
+        <div class="today-row">
+          <div class="pill" id="todayMoodPill"></div>
+          <div class="streak" id="streakBadge" hidden></div>
+          <div class="today-note" id="todayNoteText"></div>
+        </div>
+      </section>
+
+      <!-- ⭐ PRO ACTION SUITE -->
+      <section class="card pro-card" id="actionSuiteCard">
+        <div class="pro-head">
+          <h2>Your Pro Action Suite</h2>
+          <span class="pro-badge">Pro</span>
+        </div>
+
+        <!-- Free lock -->
+        <div class="pro-lock" id="actionSuiteLock">
+          <div class="blur-preview action-preview" id="actionSuitePreview">
+            Best fits today: deep work, quiet momentum…<br/>
+            Top 3 moves • Anchor • Let go • Micro-challenge
+          </div>
+          <button class="pro-cta small" id="actionSuiteUpgradeBtn" type="button">
+            Unlock Action Suite
+          </button>
+        </div>
+
+        <!-- Pro body -->
+        <div class="action-body" id="actionSuiteBody" hidden></div>
+      </section>
+
+      <!-- PRO: Today Insight -->
+      <section class="card pro-card" id="insightCard">
+        <div class="pro-head">
+          <h2>Today’s insight</h2>
+          <span class="pro-badge">Pro</span>
+        </div>
+
+        <div class="pro-lock" id="insightLock">
+          <div class="blur-preview insight-preview" id="insightPreview">
+            You’ve been choosing Focused more often this week…
+          </div>
+          <button class="pro-cta small" id="insightUpgradeBtn" type="button">
+            Unlock Insights
+          </button>
+        </div>
+
+        <div class="insight-body" id="insightBody"></div>
+      </section>
+
+      <section class="card weekly" id="weeklyCard">
+        <h2>Your week in tones</h2>
+        <div class="weekly-summary" id="weeklySummary"></div>
+        <div class="weekly-bars" id="weeklyBars"></div>
+        <div class="weekly-foot" id="weeklyFoot"></div>
+      </section>
+
+      <!-- PRO: Monthly Review -->
+      <section class="card pro-card" id="monthlyCard">
+        <div class="pro-head">
+          <h2>Your month in tones</h2>
+          <span class="pro-badge">Pro</span>
+        </div>
+
+        <div class="pro-lock" id="monthlyLock">
+          <div class="blur-preview">
+            <div class="mini-grid" id="monthlyPreview"></div>
+          </div>
+          <div class="lock-copy">
+            See your patterns, top tones, and momentum shifts over the last 30 days.
+          </div>
+          <button class="pro-cta small" id="monthlyUpgradeBtn" type="button">
+            Unlock Monthly Review
+          </button>
+        </div>
+
+        <div class="monthly-body" id="monthlyBody"></div>
+      </section>
+
+      <!-- PRO: Export only -->
+      <section class="card pro-tools" id="proToolsCard">
+        <button class="tool-btn" id="exportBtn" type="button">
+          Export your month (PDF)
+          <span class="tool-sub">Download a calm, beautiful recap of your tones.</span>
+        </button>
+      </section>
+
+      <footer class="foot">
+        <span>Caleya • your gentle daily check-in</span>
+      </footer>
+    </main>
+
+    <script type="module" src="newtab.js"></script>
+  </body>
+</html>

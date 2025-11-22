@@ -1,0 +1,10 @@
+name = "caleya-stripe-worker"
+main = "index.ts"
+compatibility_date = "2025-11-21"
+
+[vars]
+APP_ORIGIN = "https://dailyrebuild.com"
+
+# Add these in Cloudflare dashboard (Secrets):
+# STRIPE_SECRET_KEY
+# STRIPE_PRICE_ID
